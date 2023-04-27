@@ -116,8 +116,12 @@ adding 'openSUSE:Tumbleweed' to oscrc: ['https://api.opensuse.org']['trusted_prj
 ```
 
 ### Compare binaries
+Make sure your rpm version is at least 4.18, in rpm 4.14.3 from Leap 15.5 there is a bug in delsign.
 The signature from the build server needs to removed first. Then you can compare, e.g. visually by the hash or with diff.
 ```
+> rpm --version
+RPM version 4.18.0
+
 > rpm --delsign binaries/*.rpm
 
 > sha256sum binaries/*.rpm /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/{SRPMS,RPMS/{x86_64,noarch}}/*.rpm
