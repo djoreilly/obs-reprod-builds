@@ -124,17 +124,17 @@ RPM version 4.18.0
 
 > rpm --delsign binaries/*.rpm
 
-> sha256sum binaries/*.rpm /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/{SRPMS,RPMS/{x86_64,noarch}}/*.rpm
-1aa7937a2053ebece6d2eb7989785e8faafc6ac30e551caa8af089d8d5e125cc  binaries/hello-2.12.1-150500.110.2.src.rpm
-90d7779f5dcc757f5afe6ec317a0915787a1a071f92bc9ced83da86ce7174566  binaries/hello-2.12.1-150500.110.2.x86_64.rpm
-f32a1ae72b9630fd08aa59e47682b96485a7a15d7a0a27900678be071f422607  binaries/hello-debuginfo-2.12.1-150500.110.2.x86_64.rpm
-52868402cca5d79c06ba972207d7d6eb95634dd3b6d44d231913b81f21f501d9  binaries/hello-debugsource-2.12.1-150500.110.2.x86_64.rpm
-ae8d2ce8ea5fac6e30d32102a8be8440555920b599b07b63f920fcede630b112  binaries/hello-lang-2.12.1-150500.110.2.noarch.rpm
-1aa7937a2053ebece6d2eb7989785e8faafc6ac30e551caa8af089d8d5e125cc  /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/SRPMS/hello-2.12.1-150500.110.2.src.rpm
-90d7779f5dcc757f5afe6ec317a0915787a1a071f92bc9ced83da86ce7174566  /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/RPMS/x86_64/hello-2.12.1-150500.110.2.x86_64.rpm
-f32a1ae72b9630fd08aa59e47682b96485a7a15d7a0a27900678be071f422607  /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/RPMS/x86_64/hello-debuginfo-2.12.1-150500.110.2.x86_64.rpm
+> sha256sum binaries/*.rpm /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/{SRPMS,RPMS/{x86_64,noarch}}/*.rpm | rev | sort | rev
 52868402cca5d79c06ba972207d7d6eb95634dd3b6d44d231913b81f21f501d9  /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/RPMS/x86_64/hello-debugsource-2.12.1-150500.110.2.x86_64.rpm
+52868402cca5d79c06ba972207d7d6eb95634dd3b6d44d231913b81f21f501d9  binaries/hello-debugsource-2.12.1-150500.110.2.x86_64.rpm
+f32a1ae72b9630fd08aa59e47682b96485a7a15d7a0a27900678be071f422607  /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/RPMS/x86_64/hello-debuginfo-2.12.1-150500.110.2.x86_64.rpm
+f32a1ae72b9630fd08aa59e47682b96485a7a15d7a0a27900678be071f422607  binaries/hello-debuginfo-2.12.1-150500.110.2.x86_64.rpm
+90d7779f5dcc757f5afe6ec317a0915787a1a071f92bc9ced83da86ce7174566  /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/RPMS/x86_64/hello-2.12.1-150500.110.2.x86_64.rpm
+90d7779f5dcc757f5afe6ec317a0915787a1a071f92bc9ced83da86ce7174566  binaries/hello-2.12.1-150500.110.2.x86_64.rpm
+1aa7937a2053ebece6d2eb7989785e8faafc6ac30e551caa8af089d8d5e125cc  binaries/hello-2.12.1-150500.110.2.src.rpm
+1aa7937a2053ebece6d2eb7989785e8faafc6ac30e551caa8af089d8d5e125cc  /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/SRPMS/hello-2.12.1-150500.110.2.src.rpm
 ae8d2ce8ea5fac6e30d32102a8be8440555920b599b07b63f920fcede630b112  /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/RPMS/noarch/hello-lang-2.12.1-150500.110.2.noarch.rpm
+ae8d2ce8ea5fac6e30d32102a8be8440555920b599b07b63f920fcede630b112  binaries/hello-lang-2.12.1-150500.110.2.noarch.rpm
 
 > diff -rs binaries /var/tmp/build-root/15.5-x86_64/.mount/.build.packages/RPMS/x86_64
 Only in binaries: _buildenv
